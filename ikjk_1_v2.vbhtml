@@ -274,127 +274,120 @@ End Code
                     <div data-form-alert="" hidden="">
                         <p>@submitMessage</p>
                     </div>
+<!--Successful Completion Alert via a modal"-->
+                    <div id="messages" class="hide" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <div id="messages_content"></div>
+                      </div>
 
-                    <form method="post">
-                        <br />
+                    <form id="form" method="post" class="needs-validation" novalidate>
+                        
+                        @Q1<br>
                         <div class="form-check">
-                            @Q1<br />
-                            <div>
-                                <input class="form-check-input" id="A1" name="A1" type="radio" value="Meel keliya isla mar" />
-                                <label class="form-check-label" for="A1">Meel keliya isla mar.</label>
-                            </div>
-                            <div>
-                                <input class="form-check-input" id="A1" name="A1" type="radio" value="Laba meelood oo keliya isku mar" />
-                                <label class="form-check-label" for="A1">Laba meelood oo keliya isku mar.</label>
-                            </div>
-                            <div>
-                                <input class="form-check-input" id="A1" name="A1" type="radio" value="Meel kasta isla mar" />
-                                <label class="form-check-label" for="A1">Meel kasta isla mar.</label>
-                            </div>
-                            <br>
-                        </div>
-                        <div class="form-check">
-                            @Q2<br />    
-                            <div>
-                                <input class="form-check-input" id="A2" name="A2" type="radio" value="Qorraxda, dayaxa iyo xiddigaha." />
-                                <label class="form-check-label" for="A2">Qorraxda, dayaxa iyo xiddigaha.</label>
-                            </div>
-                            <div>
-                                <input class="form-check-input" id="A2" name="A2" type="radio" value="Kalluunka, shimbirraha iyo haadda." />
-                                <label class="form-check-label" for="A2">Kalluunka, shimbirraha iyo haadda.</label>
-                            </div>
-                            <div>
-                                <input class="form-check-input" id="A2" name="A2" type="radio" value="Nin." />
-                                <label class="form-check-label" for="A2">Nin.</label>
-                            </div>
-                            <br />
+                            <input class="form-check-input" id="A1" name="A1" type="radio" value="Meel keliya isla mar" />Meel keliya isla mar.<br>
+                            <input class="form-check-input" id="A1" name="A1" type="radio" value="Laba meelood oo keliya isku mar" />Laba meelood oo keliya isku mar.<br>
+                            <input class="form-check-input" id="A1" name="A1" type="radio" value="Meel kasta isla mar" aria-describedby="inputGroupPrepend" required />Meel kasta isla mar.<br>
+                            <div class="invalid-feedback">
+                                Raalli ahow walaal, laakiin su&#039;aashan lama dhammaystirin.
+                            </div><br>
                         </div>
 
+                        @Q2<br />
                         <div class="form-check">
-                            @Q3<br />
-                            <div>
-                                <input class="form-check-input" id="A3" name="A3" type="radio" value="In isaga ragga keliyuhu jeclaado." />
-                                <label class="form-check-label" for="A3">In isaga ragga keliyuhu jeclaado.</label>
-                            </div>
-                            <div>
-                                <input class="form-check-input" id="A3" name="A3" type="radio" value="In isaga dumarka keliyuhu jeclaado." />
-                                <label class="form-check-label" for="A3">In isaga dumarka keliyuhu jeclaado.</label>
-                            </div>
-                            <div>
-                                <input class="form-check-input" id="A3" name="A3" type="radio" value="In isaga ragga iyo dumarka, iyo carruurtuba ay wada jeclaadaan." />
-                                <label class="form-check-label" for="A3">In isaga ragga iyo dumarka, iyo carruurtuba ay wada jeclaadaan.</label>
-                            </div>
-                            <br />
+                            <input class="form-check-input" id="A2" name="A2" type="radio" value="Qorraxda, dayaxa iyo xiddigaha." />Qorraxda, dayaxa iyo xiddigaha. <br>
+                            <input class="form-check-input" id="A2" name="A2" type="radio" value="Kalluunka, shimbirraha iyo haadda." />Kalluunka, shimbirraha iyo haadda.<br>
+                            <input class="form-check-input" id="A2" name="A2" type="radio" value="Nin." aria-describedby="inputGroupPrepend" required />Nin.<br>
+                            <div class="invalid-feedback">
+                                Raalli ahow walaal, laakiin su&#039;aashan lama dhammaystirin.
+                            </div><br>
                         </div>
 
+                        @Q3<br />
                         <div class="form-check">
-                            @Q4<br />
-                            <div>
-                                <input class="form-check-input" id="A4" name="A4" type="radio" value="Wuxuu kala soocay birriga iyo badaha.">
-                                <label class="form-check-label" for="A4">Wuxuu kala soocay birriga iyo badaha.</label>
-                            </div>
-                            <div>
-                                <input class="form-check-input" id="A4" name="A4" type="radio" value="Wuxuu uumay nin." />
-                                <label class="form-check-label" for="A4">Wuxuu uumay nin.</label>
-                            </div>
-                            <div>
-                                <input class="form-check-input" id="A4" name="A4" type="radio" value="Wuxuu yiri, &quot;Iftiin ha ahaado&quot;" />
-                                <label class="form-check-label" for="A4">Wuxuu yiri, &quot;Iftiin ha ahaado&quot;</label>
-                            </div>
-                            <br />
+                            <input class="form-check-input" id="A3" name="A3" type="radio" value="In isaga ragga keliyuhu jeclaado." />In isaga ragga keliyuhu jeclaado.<br>
+                            <input class="form-check-input" id="A3" name="A3" type="radio" value="In isaga dumarka keliyuhu jeclaado." />In isaga dumarka keliyuhu jeclaado.<br>
+                            <input class="form-check-input" id="A3" name="A3" type="radio" value="In isaga ragga iyo dumarka, iyo carruurtuba ay wada jeclaadaan." aria-describedby="inputGroupPrepend" required />In isaga ragga iyo dumarka, iyo carruurtuba ay wada jeclaadaan.<br>
+                            <div class="invalid-feedback">
+                                Raalli ahow walaal, laakiin su&#039;aashan lama dhammaystirin.
+                            </div><br>
                         </div>
 
+                        @Q4<br>
                         <div class="form-check">
-                            @Q5<br />
-                            <div>
-                                <input class="form-check-input" id="A5" name="A5" type="radio" value="Dembigeenna." />
-                                <label class="form-check-label" for="A5">Dembigeenna.</label>
-                            </div>
-                            <div>
-                                <input class="form-check-input" id="A5" name="A5" type="radio" value="Innaga iyo dembigeennaba." />
-                                <label class="form-check-label" for="A5">Innaga iyo dembigeennaba.</label>
-                            </div>
-                            <div>
-                                <input class="form-check-input" id="A5" name="A5" type="radio" value="Innaga." />
-                                <label class="form-check-label" for="A5">Innaga.</label>
-                            </div>
-                            <br />
+                            <input class="form-check-input" id="A4" name="A4" type="radio" value="Wuxuu kala soocay birriga iyo badaha."  />Wuxuu kala soocay birriga iyo badaha.<br>
+                            <input class="form-check-input" id="A4" name="A4" type="radio" value="Wuxuu uumay nin."  />Wuxuu uumay nin.<br>
+                            <input class="form-check-input" id="A4" name="A4" type="radio" value="Wuxuu yiri, &quot;Iftiin ha ahaado&quot;" aria-describedby="inputGroupPrepend" required />Wuxuu yiri, &quot;Iftiin ha ahaado&quot;<br>
+                            <div class="invalid-feedback">
+                                Raalli ahow walaal, laakiin su&#039;aashan lama dhammaystirin.
+                            </div><br>
+                        </div>
+
+                        @Q5<br />
+                        <div class="form-check">
+                            <input class="form-check-input" id="A5" name="A5" type="radio" value="Dembigeenna." />Dembigeenna.<br>
+                            <input class="form-check-input" id="A5" name="A5" type="radio" value="Innaga iyo dembigeennaba." >Innaga iyo dembigeennaba.<br>
+                            <input class="form-check-input" id="A5" name="A5" type="radio" value="Innaga."  aria-describedby="inputGroupPrepend" required/>Innaga.<br>
+                            <div class="invalid-feedback">
+                                Raalli ahow walaal, laakiin su&#039;aashan lama dhammaystirin.
+                            </div><br>
                         </div>
 
                         <div class="form-group">
                             @Q6<br />
-                            <input type="text" name="A6" class="form-control" />
+                            <input type="text" name="A6" class="form-control" aria-describedby="inputGroupPrepend" required />
+                            <div class="invalid-feedback">
+                                Raalli ahow walaal, laakiin su&#039;aashan lama dhammaystirin.
+                            </div>
                         </div>
 
                         <div class="form-group">
                             @Q7<br />
-                            <input type="text" name="A7" class="form-control" />
+                            <input type="text" name="A7" class="form-control" aria-describedby="inputGroupPrepend" required />
+                            <div class="invalid-feedback">
+                                Raalli ahow walaal, laakiin su&#039;aashan lama dhammaystirin.
+                            </div>
                         </div>
 
                         <div class="form-group">
                             @Q8<br />
-                            <input type="text" name="A8" class="form-control" />
+                            <input type="text" name="A8" class="form-control" aria-describedby="inputGroupPrepend" required />
+                            <div class="invalid-feedback">
+                                Raalli ahow walaal, laakiin su&#039;aashan lama dhammaystirin.
+                            </div>
                         </div>
 
-                        <div class="form-group">
-                            @Q9<br />
-                                <input class="form-check-input" id="A9" name="A9" type="radio" value="Run" /> Run<br />
-                                <input class="form-check-input" id="A9" name="A9" type="radio" value="Been" /> Been<br />
+                        @Q9<br />
+                        <div class="form-check">
+                            <input class="form-check-input" id="A9" name="A9" type="radio" value="Run" /> Run<br />
+                            <input class="form-check-input" id="A9" name="A9" type="radio" value="Been" aria-describedby="inputGroupPrepend" required /> Been<br />
+                            <div class="invalid-feedback">
+                                Raalli ahow walaal, laakiin su&#039;aashan lama dhammaystirin.
+                            </div>
                         </div>
-                        <div class="form-group">
-                            @Q10<br />
-                                <input class="form-check-input" id="A10" name="A10" type="radio" value="Run" /> Run<br />
-                                <input class="form-check-input" id="A10" name="A10" type="radio" value="Been" /> Been<br />
+                        <br>
+
+                        @Q10<br />
+                        <div class="form-check">
+                            <input class="form-check-input" id="A10" name="A10" type="radio" value="Run" /> Run<br />
+                            <input class="form-check-input" id="A10" name="A10" type="radio" value="Been" aria-describedby="inputGroupPrepend" required /> Been<br />
+                            <div class="invalid-feedback">
+                                Raalli ahow walaal, laakiin su&#039;aashan lama dhammaystirin.
+                            </div><br>
                         </div>
 
-                        <br />
                             <div class="form-group">
                                 <label for="tbName" class="form-control-label mbr-fonts-style display-7">Magacaaga oo dhan: </label><br />
-                                <input type="text" value="@Request.Form("tbName")" name="tbName" class="form-control" @Validation.For("tbName") />
+                                <input type="text" value="@Request.Form("tbName")" name="tbName" class="form-control" @Validation.For("tbName")  aria-describedby="inputGroupPrepend" required />
+                                <div class="invalid-feedback">
+                                        Fadlan magacaa u qor.
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label for="tbEmail" class="form-control-label mbr-fonts-style display-7">Cinwaanka Iimaylka:</label><br />
-                                <input type="email" name="tbEmail" class="form-control" @Validation.For("tbEmail") />
+                                <input type="email" name="tbEmail" class="form-control" @Validation.For("tbEmail") aria-describedby="inputGroupPrepend" required />
+                                <div class="invalid-feedback">
+                                        Fadlan cinwaankaaga iimaylka u qor.
+                                </div>
                             </div>
                             <div class="row row-sm-offset">
 
@@ -416,10 +409,10 @@ End Code
                                 <textarea type="text" rows="3" name="tbComment" class="form-control"></textarea>
                             </div>
                             <span class="input-group-btn">
-                                <input type="submit" style="z-index: 1;" value=" Riix oo dir " class="btn btn-primary btn-form display-4" />
+                                <input type="submit" style="z-index: 1;" value=" Riix oo dir " class="btn btn-primary btn-form display-4"  data-toggle="tooltip" data-placement="bottom" title="Click and Send"/>
                             </span>
                     </form>
-                    <br>
+                    <br><br>
                 </div>
             </div>
         </div>
@@ -468,6 +461,17 @@ End Code
   <script src="assets/parallax/jarallax.min.js"></script>
   <script src="assets/theme/js/script.js"></script>
   <script src="assets/formoid/formoid.min.js"></script>
+
+  <!--Script for Modal Alert after successful submission of form-->
+
+  <script>
+    $('#form').submit(function(e) {
+        $('#messages').removeClass('hide').addClass('alert alert-success alert-dismissible fade in').slideDown().show();
+        $('#messages_content').html('<h4>Jawaabtaada waa la helay! Waad ku mahadsan tahay farriintaada.</h4>');
+        $('#modal').modal('show');
+        e.preventDefault();
+    });
+</script>
   
   <!--For hover over pop up translations, per example of Bootstrap 4 Tooltip https://www.w3schools.com/bootstrap4/bootstrap_tooltip.asp-->
 
@@ -476,7 +480,30 @@ $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();   
 });
 </script>
+
+<script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function() {
+          'use strict';
+          window.addEventListener('load', function() {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function(form) {
+              form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                  event.preventDefault();
+                  event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+              }, false);
+            });
+          }, false);
+        })();
+        </script>
+
   <input name="animation" type="hidden">
    <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i></i></a></div>
+
   </body>
 </html>
