@@ -51,7 +51,7 @@ End Section
 
         'Dim CorrespondenceNumber As Integer = 1
         If ContactID = 0 Then
-            submitMessage = "Thank you, " + strName + ". An email will be sent to " + strEmail + ". Submitted at " + strNow
+            submitMessage = "Jawaabtaada waa la helay! Waad ku mahadsan tahay farriintaada, " + strName + ". Degdeg waxaannu ku soo jawaabi doonaa. Submitted at " + strNow
 
             Dim strInsertContact As String = "INSERT INTO Nolosha1.tblContactTest " &
                                    "(ContactName, ContactEmail, ContactCountry, DateSubmitted, ContactComments) VALUES (" &
@@ -190,6 +190,9 @@ End Code
 
     <div class="container">
         <div class="media-container-row">
+                <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-7" >
+                    <p style="color:red;">@submitMessage</p>
+                </div>
             <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-7">Waxaa jira Ilaah keliya oo weyn oo qaadir ah oo wax waliba abuuray. Waxaa jiri kara Ilaah keliya. Ilaahyada kale oo dhan waa wada been iyo bilaash.&nbsp;<div><br></div><div>Qof alla qofkii yiraahda, Ilaah ma jiro, waa nacas oo haddana kufri ah. Banii-aadmigu wuxuu u baahan yahay inuu eego oo fiiriyo adduunka uu ku kor nool yahay oo qura, si uu ku aqoonsado in Ilaah jiro. Jiritaanka adduunka qudhiisu wuxuu u caddaynayaa Abuure. Dhirta badan oo kala noocnooc ah iyo xayawaanka nool oo si kaamil ah loo wada abuuray, waxay dhammaantood caddaynayaan in Ilaaha weynu uu jiro oo iyaga abuuray. Qorraxda iyo dayaxa iyo xiddigaha oo dhammu waxay wada caddaynayaan in mid kale ay abuuratay. Midkaas kalena waa Ilaah.</div><div>"Bilowgii Ilaah samada iyo dhulkuu abuuray"</div><div>- Kitaabkii kowaad ee Muuse oo la yiraahdo Bilowgii 1:1</div><div><br></div><div>Maalintii kowaad ee uumista ayaa Ilaah wuxuu yiri, "Iftiin ha ahaado" Markiiba dhalaalkii ugu horreeyey ee iftiinka ayaa gudcurkii iftiimiyey.</div><div>"Ilaahna wuxuu arkay iftiinkii inuu wanaagsan yahay: Ilaahna iftiinkii ayuu ka soocay gudcurkii. Ilaahna iftiinkii wuxuu u bixiyey Maalin, gudcurkiina wuxuu u bixiyey Habeen"</div><div>- Bilowgii 1:4-5</div><div><br></div><div>Maalintii labaadna Ilaah wuxuu kala qaybiyey biyihii, oo wuxuu ka dhigay in samooyinka muuqdaan.&nbsp;</div><div><br></div><div>Maalintii saddexaadna</div><div>"Ilaahna wuxuu yiri, Biyaha samada ka hooseeya meel ha isugu soo urureen, oo ciidda engegani ha muuqato; sidaasayna ahaatay. Markaasuu Ilaah ciidii engegnayd u bixiyey Dhul; ururkii biyahana wuxuu u bixiyey Bado: Ilaah wuxuu arkay in taasu wanaagsan tahay."</div><div>- Bilowgii 1:9-10</div><div><br></div><div>Isla maalintaas qudheeda ayaa Ilaah wuxuu ka dhigay in dhulku soo bixiyo doog iyo dhir. Ilaah wuxuu ku farxay uumiddii uu wax uumay.&nbsp;</div><div><br></div><div>Maalintii afraadna Ilaah wuxuu abuuray qorraxda, dayaxa iyo xiddigaha. Iftiinka weynu (qorraxdu) maalinnimaduu u taliyaa, iftiinka yaruna (dayaxa) habeennimaduu u taliyaa. Xiddigaha aan tirada lahayn oo dhanna waxaa wada abuuray Ilaaha jira oo runta ah.&nbsp;</div><div><br></div><div>Maalintii shanaadna Ilaah wuxuu uumay kalluunka badda ku dhex dabaasha iyo wax kasta oo ku duula cirka iyo dhulka inta u dhexaysa. Neberiyada iyo bahallada badda iyo kalluunka waaweyn iyo kalluunka yaryar iyo gorgorada iyo shimbirrada hawada duula oo dhanba, waxaa wada uumay Ilaaha weyn.&nbsp;</div><div><br></div><div>Maalinta lixaad Ilaah wuxuu uumay xayawaanka iyo waxyaalaha dhulka ku gurguurta oo dhan. Dugaagga, xoolaha, libaaxyada, maroodiyada, iyo cayayaanka oo dhan waxaa wada uumay Ilaaha jira ee runta ah. Markii uumista ugu dambaysay ayaa Ilaah wuxuu yiri, "Aan nin inoo eg ka samayno araggeenna" - Bilowgii 1:26. Ilaah dhoobo ayuu dhulka ka qaaday oo wuxuu ka sameeyey nin. Haddana sanka labadiisa dul ayuu kaga neefsaday, markaasaa ninkii naf nool noqday.&nbsp;</div><div><br></div><div>Ilaaha runta ah oo keliya ayaa uumi kara duni saas u weyn oo qurux badan oo u wacan sida middan aan joogno oo kale. Ilaaha runta ahu sidee buu yahay?&nbsp;</div><div><br></div><div>Siyaabaha wanaagsan oo Ilaah lagu ogaan karo middood, ayaa waxay tahay in la barto dabeecooyinkiisa isaga u goonida ah. Kuwaasna waxaa ka mid ah:&nbsp;</div></div>
         </div>
     </div>
@@ -271,16 +274,8 @@ End Code
         <div class="container">
             <div class="row justify-content-center">
                 <div class="media-container-column col-lg-8">
-                    <div data-form-alert="" hidden="">
-                        <p>@submitMessage</p>
-                    </div>
-<!--Successful Completion Alert via a modal"-->
-                    <div id="messages" class="hide" role="alert">
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <div id="messages_content"></div>
-                      </div>
-
-                    <form id="form" method="post" class="needs-validation" novalidate>
+                    
+                    <form method="post" class="needs-validation" novalidate>
                         
                         @Q1<br>
                         <div class="form-check">
@@ -461,17 +456,6 @@ End Code
   <script src="assets/parallax/jarallax.min.js"></script>
   <script src="assets/theme/js/script.js"></script>
   <script src="assets/formoid/formoid.min.js"></script>
-
-  <!--Script for Modal Alert after successful submission of form-->
-
-  <script>
-    $('#form').submit(function(e) {
-        $('#messages').removeClass('hide').addClass('alert alert-success alert-dismissible fade in').slideDown().show();
-        $('#messages_content').html('<h4>Jawaabtaada waa la helay! Waad ku mahadsan tahay farriintaada.</h4>');
-        $('#modal').modal('show');
-        e.preventDefault();
-    });
-</script>
   
   <!--For hover over pop up translations, per example of Bootstrap 4 Tooltip https://www.w3schools.com/bootstrap4/bootstrap_tooltip.asp-->
 
